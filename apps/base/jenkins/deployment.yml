@@ -7,13 +7,13 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: jenkins-server
+      app: jenkins
     strategy:
       type: recreate
     template:
       metadata:
         labels:
-          app: jenkins-server
+          app: jenkins
       spec:
         securityContext:
           # Note: fsgroup my be customized for a bit of better
@@ -23,7 +23,7 @@ spec:
           # runAsGroup: 1000
         serviceAccountName: jenkins-admin
         containers:
-          - name: jenkins-server
+          - name: jenkins
             image: jenkins/jenkins:lts
             imagePullPolicy: Always
             resources:
