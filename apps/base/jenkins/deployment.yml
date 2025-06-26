@@ -9,7 +9,7 @@ spec:
     matchLabels:
       app: jenkins
   strategy:
-    type: recreate
+    type: Recreate
   template:
     metadata:
       labels:
