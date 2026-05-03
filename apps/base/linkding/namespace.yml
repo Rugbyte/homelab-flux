@@ -1,0 +1,7 @@
+---
+apiVerson: v1
+kind: Namespace
+metadata:
+  name: linkding
+  labels:
+    app.kubernetes.io/component: monitoring
