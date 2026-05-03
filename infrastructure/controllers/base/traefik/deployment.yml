@@ -22,9 +22,9 @@ spec:
       terminationGracePeriodSeconds: 60
       containers:
         - name: traefik
-          image: traefik:2.5.3
+          image: traefik:2.5.4
           args:
-            - "--entryPoints.web.address-:8000/tcp"
+            - "--entryPoints.web.address=:8000/tcp"
             - "--entryPoints.websecure.address=:8443/tcp"
             - "--entryPoints.traefik.address=:9000/tcp"
             - "--api=true"
@@ -55,7 +55,7 @@ spec:
           resources:
             limits:
               cpu: 1000m
-              memory: 1000Mi
+              memory: 100Mi
             requests:
               cpu: 100m
               memory: 50Mi
